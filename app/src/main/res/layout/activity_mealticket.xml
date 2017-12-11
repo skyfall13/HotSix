@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/ivBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/ic_mealticket_bar" />
+
+    <LinearLayout
+        android:id="@+id/mealTicketLinear1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="5"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:id="@+id/mealTicketBarcodeBlank1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/mealTicketBarcodeImageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <LinearLayout
+            android:id="@+id/mealTicketBarcodeBlank2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mealtiTicketLayout_mealTicketNumber"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="식권번호: "
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/mealtiTicketLayout_mealTicketNumberLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="ex) 221"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mealtiTicketLayout_foodName"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:text="음식명: "
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/mealtiTicketLayout_foodNameLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="ex) 돈까스"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mealtiTicketLayout_storeName"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:text="음식점 명: "
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/mealtiTicketLayout_storeNameLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="ex) 간식/스넥"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/mealTicketBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_back_btn"
+            android:onClick="mealTicketBackButton_onClick" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_pointcharge_bar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/cardPaymentLinear1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/CardOrderNumber"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="주문번호" />
+
+        <TextView
+            android:id="@+id/CardPayPriceView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="결제할 금액"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <LinearLayout
+            android:id="@+id/CardNumberLinear"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="15">
+
+            <EditText
+                android:id="@+id/CardNumber1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:maxLength="4"
+                android:textSize="20dp"
+                android:inputType="number"
+                android:hint="카드번호1"
+                android:gravity="center"
+                android:selectAllOnFocus="false"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="-"/>
+
+            <EditText
+                android:id="@+id/CardNumber2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:maxLength="4"
+                android:textSize="20dp"
+                android:inputType="number"
+                android:hint="카드번호2"
+                android:gravity="center"
+                android:selectAllOnFocus="false"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="-"/>
+
+            <EditText
+                android:id="@+id/CardNumber3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:maxLength="4"
+                android:textSize="20dp"
+                android:inputType="numberPassword"
+                android:hint="카드번호3"
+                android:gravity="center"
+                android:selectAllOnFocus="false"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="-"/>
+
+            <EditText
+                android:id="@+id/CardNumber4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:maxLength="4"
+                android:textSize="20dp"
+                android:inputType="numberPassword"
+                android:hint="카드번호4"
+                android:gravity="center"
+                android:selectAllOnFocus="false"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/CardYear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLength="2"
+                android:inputType="numberDecimal"
+                android:textSize="20dp"
+                android:hint="유효년수"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/CardMonth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLength="2"
+                android:inputType="numberDecimal"
+                android:textSize="20dp"
+                android:hint="유효월수"
+                android:singleLine="true" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/UserBirth"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLength="6"
+            android:inputType="date"
+            android:textSize="20dp"
+            android:hint="생년월일 ex) 2005년 4월 15일 -> 050415"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/cardPaymentLinear2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/CardPayAccept"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onCardAcceptClick"
+                android:background="@drawable/ic_payment_accept_btn"
+                app:layout_constraintEnd_toStartOf="@+id/CardPayCancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UserBirth"
+                tools:ignore="MissingConstraints"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <ImageButton
+                android:id="@+id/CardPayCancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onCardCencelClick"
+                android:background="@drawable/ic_payment_cancel_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/CardPayAccept"
+                app:layout_constraintTop_toBottomOf="@+id/UserBirth"
+                tools:ignore="MissingConstraints"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>

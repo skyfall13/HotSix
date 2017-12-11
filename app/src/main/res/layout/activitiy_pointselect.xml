@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_pointcharge_bar"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPointSelectView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/point1000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:text="1000 원" />
+
+        <RadioButton
+            android:id="@+id/point3000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:text="3000 원" />
+
+        <RadioButton
+            android:id="@+id/point5000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:text="5000 원" />
+
+        <RadioButton
+            android:id="@+id/point10000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:text="10000 원" />
+
+        <RadioButton
+            android:id="@+id/point20000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:text="20000 원" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/pointPaymentAcceptButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="pointPaymentAcceptClick"
+            android:background="@drawable/ic_chargepoint_btn"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"/>
+
+        <ImageButton
+            android:id="@+id/pointPaymentCancelButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="pointPaymentCancelClick"
+            android:background="@drawable/ic_chargepoint_cancel_btn"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>

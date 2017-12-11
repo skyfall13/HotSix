@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    android:background="@color/listBack"
+    tools:context="com.hotsix.www.hotsixshoppingcart_module.ShoppingCartActivity">
+
+    <TextView
+        android:id="@+id/rankTextView"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:hint="1"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="3">
+                <TextView
+                    android:id="@+id/mealTicketNumber"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="식권번호:"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/foodName"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="음식명: "
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/storeName"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="매장명: "
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:weightSum="3">
+            <TextView
+                android:id="@+id/mealTicketNumberLabel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="ex) 221"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/foodNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="ex) 돈까스"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/storeNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="ex) 간식/스넥"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search_black_24dp"/>
+    </LinearLayout>
+
+</LinearLayout>

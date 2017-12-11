@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:id="@+id/storelist"
+        android:gravity="center_vertical"
+    android:orientation="vertical"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:background="@color/listBack"
+            android:weightSum="8"
+            >
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_hotsix_round"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="label1"
+                    android:textSize="40dp"
+                    android:layout_weight="4.5"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_peoples_icon"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/label2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="label2"
+                    android:textSize="40dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    />
+        </LinearLayout>
+    </LinearLayout>
